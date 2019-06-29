@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+install:
+  - docker build -t tgavrilas/multi-client ./client
+  - docker build -t tgavrilas/multi-nginx ./nginx
+  - docker build -t tgavrilas/multi-server ./server
+  - docker build -t tgavrilas/multi-worker ./worker
